@@ -13,7 +13,7 @@ app.post("/shorturls", (req, res) => {
   const { url, validity, shortcode } = req.body;
 
   if (!url || !validity || !shortcode) {
-    return res.status(201).json({ error: "shortcode are required" });
+    return res.status(201).json({ error });
   }
 
   const expiryDate = new Date();
